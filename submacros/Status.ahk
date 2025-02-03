@@ -1866,6 +1866,31 @@ nm_command(command)
 		Send (options := Trim(SubStr(command.content, InStr(command.content, name)+StrLen(name))))
 		discord.SendEmbed('Used ``````ahk\nSend \"' StrReplace(options, '"', '\"') '\"``````', 5066239, , , , id)
 
+		case "players":
+		Send ("{Esc}")
+		Sleep (1000)
+		pBM := Gdip_BitmapFromScreen()
+		discord.SendImage(pBM, "ss.png", id)
+		Gdip_DisposeImage(pBM)
+
+		case "ban":
+		Send ("/")
+		Sleep (500)
+		Send ("/ban ")
+		Sleep (500)
+		Send (options := Trim(SubStr(command.content, InStr(command.content, name)+StrLen(name))))
+		Sleep (500)
+		Send ('{Enter}')
+		discord.SendEmbed('Used ``````ahk\nBan \"' StrReplace(options, '"', '\"') '\"``````', 5066239, , , , id)
+
+		case "kick":
+		Send ("/")
+		Sleep (500)
+		Send ("/kick ")
+		Sleep (500)
+		Send (options := Trim(SubStr(command.content, InStr(command.content, name)+StrLen(name))))
+		Sleep (500)
+		Send ('{Enter}')
 
 		case "upload":
 		discord.SendFile(Trim(SubStr(command.content, InStr(command.content, name)+StrLen(name))), id)
