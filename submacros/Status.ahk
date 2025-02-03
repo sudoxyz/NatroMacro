@@ -893,6 +893,21 @@ nm_command(command)
 						"inline": true
 					},
 					{
+						"name": "' commandPrefix 'kick [player]",
+						"value": "Uses AHK`'s ``Send`` command (see docs)",
+						"inline": true
+					},
+					{
+						"name": "' commandPrefix 'ban [player]",
+						"value": "Uses AHK`'s ``Send`` command (see docs)",
+						"inline": true
+					},
+					{
+						"name": "' commandPrefix 'players",
+						"value": "Uses AHK`'s ``Send`` command (see docs)",
+						"inline": true
+					},
+					{
 						"name": "' commandPrefix 'upload [filepath]",
 						"value": "Uploads a specific file from ``filepath``",
 						"inline": true
